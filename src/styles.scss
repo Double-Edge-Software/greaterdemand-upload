@@ -1,5 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+.gds-logo{
+  margin:0 auto;
+  padding-bottom:2em;
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(to bottom left, #733828,rgb(109, 94, 51),#733828,#733828);
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .content {
   display: flex;
   padding: 10vh 10vw;
@@ -11,10 +27,6 @@
 
 pre {
   text-align: left;
-}
-
-html { 
-  background: #E8E9EC;
 }
 
 .dropzone { 

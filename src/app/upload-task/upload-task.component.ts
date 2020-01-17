@@ -19,6 +19,9 @@ export class UploadTaskComponent implements OnInit {
   snapshot: Observable<any>;
   downloadURL;
 
+  customerName;
+  taxYear;
+
   constructor(private storage: AngularFireStorage, private db: AngularFirestore) { }
 
   ngOnInit() {
@@ -39,13 +42,16 @@ export class UploadTaskComponent implements OnInit {
     // Progress monitoring
     this.percentage = this.task.percentageChanges();
 
+    this.customerName = window.localStorage.getItem("customerName")
+    this.taxYear = window.localStorage.getItem("taxYear")
+    
     this.snapshot   = this.task.snapshotChanges().pipe(
       tap(console.log),
       // The file's download URL
       finalize( async() =>  {
         this.downloadURL = await ref.getDownloadURL().toPromise();
 
-        this.db.collection('files').add( { downloadURL: this.downloadURL, path });
+        this.db.collection('files').add( {Name: this.customerName, TaxYear:this.taxYear, downloadURL: this.downloadURL, path });
       }),
     );
   }

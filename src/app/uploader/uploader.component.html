@@ -1,3 +1,56 @@
+<div class="gds-logo">
+  <img src="../../assets/images/gds-logo.png" alt="Greater Demand Solutions Logo">
+</div>
+
+<!-- <div class="container">  
+  <form>
+    <h1>Please Submit The Following Information:</h1>
+    <p>Your personal information will not be shared, and only used for business purposes.
+      In order to proceed with document uploads, Greater Demand requires the following information.
+    </p>
+    <div class="group">      
+      <input type="text" required>
+      <span class="bar"></span>
+      <label>Name</label>
+    </div>
+    <div class="group">      
+      <input type="text" required>
+      <span class="bar"></span>
+      <label>Email</label>
+    </div>
+    <div class="btn-wrapper">
+      <button type="submit" value="submit"  class="button2 btn-primary2">Send<div class="btn-secondary2"></div></button>
+    </div>
+  </form>
+</div> -->
+
+
+<h1>Please Submit The Following Information:</h1>
+<p>Your personal information will not be shared, and only used for business purposes.
+    In order to proceed with document uploads, Greater Demand requires the following information.</p>
+<div class="form-center container">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="infoForm">
+  
+    <label class="material-label">
+      First Name:
+      <input type="text" formControlName="firstName" placeholder="Please Enter Your First Name">
+    </label>
+  
+    <label class="material-label" >
+      Last Name:
+      <input type="text" formControlName="lastName" placeholder="Please Enter Your Last Name">
+    </label>
+  
+    <label class="material-label">
+      Tax Year:
+      <input type="text" formControlName="taxYear" placeholder="Please Enter Your Tax Year">
+    </label>
+  
+    <button class="button2 btn-primary2" type="submit">Submit</button>
+  
+  </form>  
+</div>
+
 <div class="dropzone" 
      dropzone
      (hovered)="toggleHover($event)"
@@ -8,7 +61,7 @@
 
 
 
-     <h3>AngularFire Drop Zone</h3>
+     <h3>Greater Demand Solutions - Submit Your Documents</h3>
      <p>Drag and Drop a File</p>
      <div class="file">
         <label class="file-label">
