@@ -27,7 +27,7 @@ export class PasswordlessAuthComponent implements OnInit {
 
 
   async sendEmailLink() {
-    const actionCodeSettings = { url: 'http://localhost:4200/',
+    const actionCodeSettings = { url: 'https://greaterdemand-upload.herokuapp.com/',
     handleCodeInApp:true
   }
     try {
