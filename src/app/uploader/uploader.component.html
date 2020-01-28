@@ -28,7 +28,7 @@
 <h1>Please Submit The Following Information:</h1>
 <p>Your personal information will not be shared and will only be accessed for business purposes. In order to proceed with your document upload, please enter your identification information below so we may link the documents to you.</p>
 <div class="form-center container">
-  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="infoForm">
+  <form #f="ngForm" [formGroup]="profileForm" (ngSubmit)="onSubmit(f)" class="infoForm">
   
     <label class="material-label">
       First Name:
