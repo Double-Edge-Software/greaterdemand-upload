@@ -20,9 +20,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { PersonalFormComponent } from './personal-form/personal-form.component';
 import { BusinessFormComponent } from './business-form/business-form.component';
+import { IntakeFormComponent } from './intake-form/intake-form.component';
 
 @NgModule({
-  declarations: [AppComponent, DropzoneDirective, UploaderComponent, UploadTaskComponent, PasswordlessAuthComponent, PersonalFormComponent, BusinessFormComponent],
+  declarations: [AppComponent, DropzoneDirective, UploaderComponent, UploadTaskComponent, PasswordlessAuthComponent, PersonalFormComponent, BusinessFormComponent, IntakeFormComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,

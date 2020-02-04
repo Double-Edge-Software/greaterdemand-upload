@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'uploader',
@@ -14,20 +13,9 @@ export class UploaderComponent {
 
   isHovering: boolean;
 
-  profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    taxYear: new FormControl(''),
-  });
+  
   files: File[] = [];
 
-  onSubmit(form: NgForm){
-    window.localStorage.setItem("customerName",`${this.profileForm.value.firstName} ${this.profileForm.value.lastName}`);
-    window.localStorage.setItem("taxYear",`${this.profileForm.value.taxYear}`);
-    alert("Your information has been saved.Please upload your file to complete the process below.")
-    form.form.markAsPristine();
-    form.resetForm();
-  }
 
   toggleHover(event: boolean) {
     this.isHovering = event;

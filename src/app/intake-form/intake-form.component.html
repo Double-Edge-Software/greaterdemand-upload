@@ -1,0 +1,28 @@
+<div class="gds-logo">
+  <img src="../../assets/images/gds-logo.png" alt="Greater Demand Solutions Logo">
+</div>
+
+<h1>Please Submit The Following Information:</h1>
+<p>Your personal information will not be shared and will only be accessed for business purposes. In order to proceed with your document upload, please enter your identification information below so we may link the documents to you.</p>
+<div class="form-center container">
+  <form #f="ngForm" [formGroup]="profileForm" (ngSubmit)="onSubmit(f)" class="infoForm">
+  
+    <label class="material-label">
+      First Name:
+      <input type="text" formControlName="firstName" placeholder="Please Enter Your First Name">
+    </label>
+  
+    <label class="material-label" >
+      Last Name:
+      <input type="text" formControlName="lastName" placeholder="Please Enter Your Last Name">
+    </label>
+  
+    <label class="material-label">
+      Tax Year:
+      <input type="text" formControlName="taxYear" placeholder="Please Enter Your Tax Year">
+    </label>
+  
+    <button class="button2 btn-primary2" type="submit">Submit</button>
+  
+  </form>  
+</div>

@@ -4,6 +4,7 @@ import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth
 import { UploaderComponent } from './uploader/uploader.component';
 import { BusinessFormComponent } from './business-form/business-form.component';
 import { PersonalFormComponent } from './personal-form/personal-form.component';
+import { IntakeFormComponent } from './intake-form/intake-form.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path:'personal',component:PersonalFormComponent
+  },
+  {
+    path: 'intake', component: IntakeFormComponent
   }
   
 ];

@@ -1,0 +1,163 @@
+
+
+
+.infoForm > label{
+    display: block;
+}
+
+/* Test for Material Design Form */
+
+
+form {
+    width: 50%;
+    margin: 1em 0;
+    display: block;
+    background: #ffffff;
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    padding: 4em;
+  }
+
+
+  h1 {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.2em;
+    color: black;
+  }
+
+  .container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+  }
+  input:focus {
+    outline: none; 
+  }
+
+
+  /* Button */
+
+  /* Button */
+.button2,.btn-secondary2 {
+    cursor: pointer;
+    padding: 17px 35px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Roboto Mono,Courier New,Courier,monospace!important;
+    line-height: 1;
+    color: #ffffff;
+    border-radius: 4px;
+    background: linear-gradient(-45deg, #895B37, #E99447, #E9CD47, #895B37, #A9924F, #641E1C, #641E1C, #A9924F);
+    background-size: 1100%;
+    border: none;
+    position: relative;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    transition: background-position 3s cubic-bezier(.455,.03,.515,.955),-webkit-transform .3s cubic-bezier(.175,.885,.32,1.275);
+    transition: transform .3s cubic-bezier(.175,.885,.32,1.275),background-position 3s cubic-bezier(.455,.03,.515,.955);
+    transition: transform .3s cubic-bezier(.175,.885,.32,1.275),background-position 3s cubic-bezier(.455,.03,.515,.955),-webkit-transform .3s cubic-bezier(.175,.885,.32,1.275);
+    box-shadow: 0px 3px 5px 1px #ccc;
+    transition: top 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
+    
+    &:active {
+      top: 3px;
+      box-shadow: 0px 0px 5px 1px #ccc;
+    }
+  }
+  .button2 {
+    margin: 30px 0;
+    transition: bottom .3s cubic-bezier(.175,.885,.32,1.275),background-position 3s cubic-bezier(.455,.03,.515,.955),-webkit-transform .3s cubic-bezier(.175,.885,.32,1.275);
+    transition: transform .3s cubic-bezier(.175,.885,.32,1.275),bottom .3s cubic-bezier(.175,.885,.32,1.275),background-position 3s cubic-bezier(.455,.03,.515,.955);
+    transition: transform .3s cubic-bezier(.175,.885,.32,1.275),bottom .3s cubic-bezier(.175,.885,.32,1.275),background-position 3s cubic-bezier(.455,.03,.515,.955),-webkit-transform .3s cubic-bezier(.175,.885,.32,1.275)
+  }
+  .button2,.button2 .btn-secondary2 {
+    background-position: 0 50%;
+    bottom: 0
+  }
+  .button2 .btn-secondary2 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    -webkit-filter: blur(16px);
+    filter: blur(16px);
+    opacity: .9;
+    -webkit-transform: scale3d(.9,.9,1);
+    transform: scale3d(.9,.9,1);
+    transition: bottom .3s cubic-bezier(.175,.885,.32,1.275),background-position 3s cubic-bezier(.455,.03,.515,.955),-webkit-transform .3s cubic-bezier(.175,.885,.32,1.275),-webkit-filter .3s cubic-bezier(.175,.885,.32,1.275);
+    transition: transform .3s cubic-bezier(.175,.885,.32,1.275),filter .3s cubic-bezier(.175,.885,.32,1.275),bottom .3s cubic-bezier(.175,.885,.32,1.275),background-position 3s cubic-bezier(.455,.03,.515,.955);
+    transition: transform .3s cubic-bezier(.175,.885,.32,1.275),filter .3s cubic-bezier(.175,.885,.32,1.275),bottom .3s cubic-bezier(.175,.885,.32,1.275),background-position 3s cubic-bezier(.455,.03,.515,.955),-webkit-transform .3s cubic-bezier(.175,.885,.32,1.275),-webkit-filter .3s cubic-bezier(.175,.885,.32,1.275)
+  }
+  .button2:focus,.button2:hover {
+    -webkit-transform: scale3d(1.1,1.1,1);
+    transform: scale3d(1.1,1.1,1);
+    background-position: 100% 50%;
+    outline: none;
+    bottom: 2px
+  }
+  .button2:focus .btn-secondary2,.button2:hover .btn-secondary2 {
+    background-position: 100% 50%;
+    bottom: -5px;
+    -webkit-filter: blur(25px);
+    filter: blur(25px)
+  }
+
+  /* Label */
+
+//   .material-label {
+//     color: #c1c1c1; 
+//     font-size: 18px;
+//     font-weight: normal;
+//     position: relative;
+//     pointer-events: none;
+//     left: 5px;
+//     top: 10px;
+//     transition: 0.2s ease all; 
+//     -moz-transition: 0.2s ease all; 
+//     -webkit-transition: 0.2s ease all;
+//   }
+
+  input:focus ~ .material-label, input:valid ~ .material-label {
+    top: -20px;
+    font-size: 14px;
+    color: #dc3545;
+  }
+  .bar { 
+    position: relative; 
+    display: block; 
+    width: 100%; 
+  }
+  .bar:before, .bar:after {
+    content: '';
+    height: 2px; 
+    width: 0;
+    bottom: 0; 
+    position: absolute;
+    background: #dc3545; 
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
+  }
+  .bar:before {
+    left: 50%;
+  }
+  .bar:after {
+    right: 50%; 
+  }
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 50%;
+  }
