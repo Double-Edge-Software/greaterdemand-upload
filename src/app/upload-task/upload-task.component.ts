@@ -51,7 +51,7 @@ export class UploadTaskComponent implements OnInit {
       finalize( async() =>  {
         this.downloadURL = await ref.getDownloadURL().toPromise();
 
-        this.db.collection('files').add( {Name: this.customerName, TaxYear:this.taxYear, downloadURL: this.downloadURL, path, UploadDate: new Date().toLocaleString()  });
+        this.db.collection('files').add( {Name: this.customerName, TaxYear:this.taxYear, downloadURL: this.downloadURL, path, UploadDate: new Date().toLocaleString(), Post_Date_TimeStamp: Date.now()  });
       }),
     );
   }
