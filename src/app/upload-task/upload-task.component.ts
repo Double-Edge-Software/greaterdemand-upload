@@ -41,6 +41,8 @@ export class UploadTaskComponent implements OnInit {
 
     // Progress monitoring
     this.percentage = this.task.percentageChanges();
+    
+    console.log(this.percentage)
 
     this.customerName = window.localStorage.getItem("customerName")
     this.taxYear = window.localStorage.getItem("taxYear")
